@@ -6,7 +6,16 @@
  </head>
  <body>
  
-
+  <% @team.each do |key, val| %>
+   <% spliting = key.split("_") %>
+    <% string = "" %>
+   <% string << spliting[0] if spliting[0] %>
+    <% string << " "<< spliting[1] if spliting[1] %>
+  
+    <h3><%= string %>: <%= val.capitalize %> </h3>
+    
+  
+  <% end %>
 
  </body>
 </html>
